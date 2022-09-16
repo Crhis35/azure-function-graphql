@@ -17,7 +17,7 @@ export class UserResolver {
     try {
       const newUser = new User(createUserInput);
       const user = em.getRepository(User).create(newUser);
-      await em.persist([user])..flush();
+      await em.persist([user]).flush();
       return 'Create User';
     } catch (error) {
       console.error(error);
